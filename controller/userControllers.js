@@ -76,7 +76,7 @@ module.exports = {
       email: req.body.email,
       password: req.body.password,
     };
-    console.log(req.body,"iciiiiiii")
+   
     if (user.email === "" || user.password === "") {
       throw new BadRequestError("Bad request", "please complete all fields");
     }
@@ -85,7 +85,7 @@ module.exports = {
         email: user.email,
       },
     });
-    console.log(user.email,"userrrrrEmail")
+  
     if (!match) {
       throw new UnAuthorizedError(
         "UnAuthorized access",
@@ -158,7 +158,7 @@ module.exports = {
       initialUser.firstName === inputStateUser.firstName &&
       initialUser.lastName === inputStateUser.lastName &&
       initialUser.email === inputStateUser.email 
-      //initialUser.password === inputStateUser.password &&
+  
    
     ) {
       throw new BadRequestError(

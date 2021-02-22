@@ -27,8 +27,8 @@ app.use(bodyParser.json());
 //config route
 app.use('/api', router)
 
-// app.use("*", notFoundHandler);
-// app.use(errorHandler);
+app.use("*", notFoundHandler);
+app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
 module.exports = app;
